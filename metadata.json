@@ -1,0 +1,8 @@
+{
+  "name": "Market Express Online",
+  "description": "Modern Filipino online wet market for fresh farm vegetables, prime pork, beef, poultry, and daily coastal seafood.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

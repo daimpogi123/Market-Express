@@ -22,7 +22,7 @@ export function MarketImage({
 
   if (hasError) {
     return (
-      <div
+      <span
         className={`flex flex-col items-center justify-center bg-[#EEF2EA] text-[#3F5242] p-4 text-center ${
           grayscale ? 'grayscale opacity-75' : ''
         } ${className}`}
@@ -31,7 +31,7 @@ export function MarketImage({
       >
         <Sprout className="w-8 h-8 mb-2 text-[#166534]/60" aria-hidden="true" />
         <span className="text-xs font-medium text-[#4A584C] line-clamp-2">{alt}</span>
-      </div>
+      </span>
     );
   }
 

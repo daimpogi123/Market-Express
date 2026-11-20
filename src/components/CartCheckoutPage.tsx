@@ -473,12 +473,12 @@ export function CartCheckoutPage({
                     }`}
                   >
                     <Truck className="w-5 h-5 text-[#166534] mt-0.5 shrink-0" aria-hidden="true" />
-                    <div>
-                      <p className="text-sm font-semibold text-[#1A241B]">Doorstep Delivery</p>
-                      <p className="text-xs text-[#4A584C] mt-0.5">
+                    <span className="block">
+                      <span className="block text-sm font-semibold text-[#1A241B]">Doorstep Delivery</span>
+                      <span className="block text-xs text-[#4A584C] mt-0.5">
                         Insulated cold-chain rider · Shipping fee depends on buyer location
-                      </p>
-                    </div>
+                      </span>
+                    </span>
                   </button>
 
                   <button
@@ -491,12 +491,12 @@ export function CartCheckoutPage({
                     }`}
                   >
                     <Store className="w-5 h-5 text-[#166534] mt-0.5 shrink-0" aria-hidden="true" />
-                    <div>
-                      <p className="text-sm font-semibold text-[#1A241B]">Market Hub Pickup</p>
-                      <p className="text-xs text-[#4A584C] mt-0.5">
+                    <span className="block">
+                      <span className="block text-sm font-semibold text-[#1A241B]">Market Hub Pickup</span>
+                      <span className="block text-xs text-[#4A584C] mt-0.5">
                         Free (₱0.00) · Collect packed basket at our QC, Makati, or Pasig hub
-                      </p>
-                    </div>
+                      </span>
+                    </span>
                   </button>
                 </div>
 
@@ -706,10 +706,10 @@ export function CartCheckoutPage({
                         }`}
                       >
                         <Icon className="w-5 h-5 text-[#166534] mt-0.5 shrink-0" aria-hidden="true" />
-                        <div>
-                          <p className="text-sm font-semibold text-[#1A241B]">{method.label}</p>
-                          <p className="text-xs text-[#5A6B5D] mt-0.5">{method.sub}</p>
-                        </div>
+                        <span className="block">
+                          <span className="block text-sm font-semibold text-[#1A241B]">{method.label}</span>
+                          <span className="block text-xs text-[#5A6B5D] mt-0.5">{method.sub}</span>
+                        </span>
                       </button>
                     );
                   })}

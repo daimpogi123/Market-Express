@@ -65,6 +65,7 @@ export function CategoriesPage({
           <button
             type="button"
             onClick={() => onNavigate('vegetables')}
+            aria-label="Explore Vegetables"
             className="aspect-[4/3] w-full overflow-hidden bg-[#F0F3EC] block text-left"
           >
             <MarketImage
@@ -102,6 +103,7 @@ export function CategoriesPage({
           <button
             type="button"
             onClick={() => onNavigate('meats')}
+            aria-label="Explore Meats"
             className="aspect-[4/3] w-full overflow-hidden bg-[#F0F3EC] block text-left"
           >
             <MarketImage
@@ -143,11 +145,9 @@ export function CategoriesPage({
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {meatSubgroups.map((sub) => (
-            <button
+            <article
               key={sub.id}
-              type="button"
-              onClick={() => onNavigate('meats', sub.id)}
-              className="group text-left bg-white rounded-xl border border-[#E2E8DC] overflow-hidden hover:shadow-md transition-all duration-200 flex flex-col"
+              className="relative group text-left bg-white rounded-xl border border-[#E2E8DC] overflow-hidden hover:shadow-md transition-all duration-200 flex flex-col"
             >
               <div className="aspect-[4/3] w-full overflow-hidden bg-[#F0F3EC]">
                 <MarketImage
@@ -160,12 +160,18 @@ export function CategoriesPage({
                 <p className="text-xs font-medium text-[#166534] tabular-nums">
                   {sub.count} selections
                 </p>
-                <h3 className="text-base font-semibold text-[#1A241B] group-hover:text-[#166534]">
-                  {sub.title}
+                <h3>
+                  <button
+                    type="button"
+                    onClick={() => onNavigate('meats', sub.id)}
+                    className="text-left text-base font-semibold text-[#1A241B] group-hover:text-[#166534] after:absolute after:inset-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#166534]"
+                  >
+                    {sub.title}
+                  </button>
                 </h3>
                 <p className="text-xs text-[#5A6B5D] leading-relaxed">{sub.detail}</p>
               </div>
-            </button>
+            </article>
           ))}
         </div>
       </div>

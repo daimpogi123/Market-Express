@@ -66,15 +66,16 @@ export function CategoryShowcase({
             <button
               type="button"
               onClick={() => onSelectCategory(cat.id)}
+              aria-label={`Browse ${cat.title} category`}
               className="block w-full text-left focus-visible:outline-2 focus-visible:outline-inset focus-visible:outline-[#166534]"
             >
-              <div className="aspect-[4/3] w-full overflow-hidden bg-[#F0F3EC]">
+              <span className="block aspect-[4/3] w-full overflow-hidden bg-[#F0F3EC]">
                 <MarketImage
                   src={cat.image}
                   alt={cat.alt}
                   className="w-full h-full group-hover:scale-[1.02] transition-transform duration-300"
                 />
-              </div>
+              </span>
             </button>
 
             <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between gap-5">
